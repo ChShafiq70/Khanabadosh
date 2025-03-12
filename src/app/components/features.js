@@ -42,7 +42,7 @@ export default function Feature() {
             <CircleAlert className="w-40 h-10 text-gray-600" />
             <div className="flex flex-col gap-2" >
               <h3 className="text-xl uppercase">FALL DETECTION</h3>
-              <p className="text-gray-600 text-sm">Add fall detection to automatically detect when you fall and quickly contact help, even if you're unable to press the button.</p>
+              <p className="text-gray-600 text-sm">Add fall detection to automatically detect when you fall and quickly contact help, even if you are unable to press the button.</p>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ export default function Feature() {
             <Database className="w-40 h-10 text-gray-600" />
             <div className="flex flex-col gap-2" >
               <h3 className="text-xl uppercase">NO LONG-TERM CONTRACTS</h3>
-              <p className="text-gray-600 text-sm">Experience peace of mind knowing you're protected in both emergency and non-emergency situations with a service that has no hidden fees or long-term contracts.</p>
+              <p className="text-gray-600 text-sm">Experience peace of mind knowing you are protected in both emergency and non-emergency situations with a service that has no hidden fees or long-term contracts.</p>
             </div>
           </div>
 

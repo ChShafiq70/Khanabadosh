@@ -44,7 +44,7 @@ const MobileSystem = () => {
           </p>
         </div>
         <div className="absolute right-0 top-0 bottom-0 w-full hidden lg:block">
-          <img
+          <Image
             src="/images/Frame.png"
             alt="Decorative pattern"
             className="w-full h-full object-cover mix-blend-multiply"
@@ -54,14 +54,12 @@ const MobileSystem = () => {
       <section className="max-w-7xl mx-auto py-16 px-10 flex flex-col lg:flex-row items-center gap-10">
       <div className="max-w-md">
       <h4 className="text-gray-500 text-sm font-semibold">How It Works</h4>
-      <h2 className="text-3xl font-bold text-red-500 mt-2">How Does Fall Detection Work</h2>
-      
+      <h2 className="text-3xl font-bold text-red-500 mt-2">How Does Fall Detection Work</h2>      
       <p className="text-gray-700 mt-4">
         If you are unable to press your button and the sensor technology detects a fall, trained response 
         specialists will immediately contact you through the system’s two-way speaker. Even if you cannot speak, 
         they will assess the situation and send the appropriate help.
       </p>
-
       <div className="mt-6 space-y-4">
         {[
           "The fall detection technology can automatically sense a fall.",
@@ -75,7 +73,6 @@ const MobileSystem = () => {
         ))}
       </div>
       </div>
-
         <div className="relative bg-white p-10">
           <div className="grid grid-cols-2   gap-1">
             <div className="col-span-2 relative">

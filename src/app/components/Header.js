@@ -20,9 +20,9 @@ const Header = () => {
         style={{ fontFamily: "Poppins, sans-serif"}}>
           <li><Link href="/" className="hover:text-red-500">Home</Link></li>
           <li><Link  href="/home-system" className="hover:text-red-500">Home System</Link></li>
-          <li><a href="mobile-system" className="hover:text-red-500">Mobile System</a></li>
-          <li><a href="/fall-detaction" className="hover:text-red-500">Fall Detection</a></li>
-          <li><a href="/smart-watches" className="hover:text-red-500">Smart Watches</a></li>
+          <li><Link href="mobile-system" className="hover:text-red-500">Mobile System</Link></li>
+          <li><Link href="/fall-detaction" className="hover:text-red-500">Fall Detection</Link></li>
+          <li><Link href="/smart-watches" className="hover:text-red-500">Smart Watches</Link></li>
         </ul>
         <button href="#" className="hidden md:block bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">
           Contact Us
@@ -31,12 +31,10 @@ const Header = () => {
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="text-white bg-[#E74C3C] w-8 h-6" />}
         </button>
       </nav>
-
       <div
         className={`fixed inset-0  bg-gray-100 bg-opacity-90 transition-opacity duration-800 ${menuOpen ?  "translate-x-0" : "-translate-x-full"} transition-transform ease-in-out duration-700 md:hidden`} 
         onClick={() => setMenuOpen(false)}
       ></div>
-
       <div
         className={`fixed top-0 left-0 w-80 h-full bg-white shadow-2xl p-6 transform ${menuOpen ? "translate-x-0" : "-translate-x-full"} transition-transform ease-in-out duration-2000 md:hidden`}
       >
@@ -45,11 +43,11 @@ const Header = () => {
         </button>
         <ul className="flex flex-col space-y-4 mt-10 font-semibold text-black"
          style={{ fontFamily: "Poppins, sans-serif"}}>
-          <li><a href="/" className="hover:text-red-500">Home</a></li>
-          <li><a href="/home-system" className="hover:text-red-500">Home System</a></li>
-          <li><a href="/mobile-system" className="hover:text-red-500">Mobile System</a></li>
-          <li><a href="/fall-detaction" className="hover:text-red-500">Fall Detection</a></li>
-          <li><a href="/smart-watches" className="hover:text-red-500">Smart Watches</a></li>
+          <li><Link href="/" className="hover:text-red-500">Home</Link></li>
+          <li><Link href="/home-system" className="hover:text-red-500">Home System</Link></li>
+          <li><Link href="/mobile-system" className="hover:text-red-500">Mobile System</Link></li>
+          <li><Link href="/fall-detaction" className="hover:text-red-500">Fall Detection</Link></li>
+          <li><Link href="/smart-watches" className="hover:text-red-500">Smart Watches</Link></li>
         </ul>
         <a href="#" className="block mt-6 bg-red-500 text-white py-2 px-4 rounded-lg text-center hover:bg-red-600">
           Contact Us

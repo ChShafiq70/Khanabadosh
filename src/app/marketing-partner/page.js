@@ -12,7 +12,7 @@ const MarketingPartner = () => {
           American Republic, American Republic Insurance, Amerigroup, Amerigroup, Amerilife, Amerilife Marketing Group, Ameriquote, AON, Art Jetter & Co,
           Assurant, Assured Life, AvMed Inc., AXA Advisors, Bankers Life Insurance, Benefit Mall, Cambia, CareMore, CareSource, Cars Insurance,
           CDPHP, Centene, Cege Media, Cigna Health Group, Combined, Community Care, Complete Senior Benefits, ConnectiCare, Continental Life, Country
-          Insurance, Coventry Health Care, Coverage One Insurance, DBA “Connect Insurance Brands”, E-Telequote, eHealth, Elderplan,
+          Insurance, Coventry Health Care, Coverage One Insurance, DBA Connect Insurance Brands, E-Telequote, eHealth, Elderplan,
           EmblemHealth, Ensurem, Fallon Health, Family Life, Fidelis Care, First Financial, Forefront Health Insurance Solutions, Forethought, Geisinger
           Insurance, Genworth, Gerber Life, GHI, GMAC, Golden Rule, GoMedigap.com, Government Personnel Mutual Life, Guarantee Trust Life, GuideStar
           Marketing Group LLC, Guide2Insure, HAP Health Alliance, Harvard Pilgrim Health Care, Health Care Service Corp., Health Choice

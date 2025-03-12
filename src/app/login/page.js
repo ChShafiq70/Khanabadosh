@@ -1,8 +1,9 @@
-"use client"; // ✅ Ensure this is a Client Component
+"use client"; 
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Script from "next/script"; // ✅ Dynamically loads scripts
+import Script from "next/script"; 
+import Image from "next/image";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -12,7 +13,6 @@ const Login = () => {
   const router = useRouter();
 
   useEffect(() => {
-    // ✅ Check authentication status
     const auth = localStorage.getItem("isAuthenticated") === "true";
     setIsAuthenticated(auth);
   }, []);
@@ -21,9 +21,9 @@ const Login = () => {
     e.preventDefault();
 
     if (username === "admin" && password === "Admin") {
-      localStorage.setItem("isAuthenticated", "true"); // ✅ Save login state
+      localStorage.setItem("isAuthenticated", "true"); 
       setIsAuthenticated(true);
-      router.push("/"); // ✅ Redirect to homepage
+      router.push("/");
     } else {
       setError("Invalid username or password.");
     }
@@ -57,8 +57,6 @@ const Login = () => {
           </button>
         </form>
       </div>
-
-      {/* ✅ Load Scripts Based on Authentication Status */}
       {isAuthenticated ? (
         <Script src="/leadid.js" strategy="lazyOnload" />
       ) : (
@@ -80,7 +78,7 @@ const Login = () => {
           </Script>
 
           <noscript>
-            <img
+            <Image
               src="//create.leadid.com/noscript.gif?lac=A4648FA2-782B-05DC-6A0F-612384BDE149&lck=0304e624-e930-18bd-740d-da193354c8e9&snippet_version=2"
               alt="LeadID"
             />

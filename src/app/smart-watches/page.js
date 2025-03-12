@@ -26,7 +26,7 @@ const testimonials = [
   {
     name: "Thomas",
     review:
-      "I’m so happy to find such a reliable home medical alert system. This website has all the information you need. Recommended to visit this website before choosing the medical alert system.",
+      "I am so happy to find such a reliable home medical alert system. This website has all the information you need. Recommended to visit this website before choosing the medical alert system.",
   },
   {
     name: "Megan",
@@ -84,9 +84,11 @@ const MobileSystem = () => {
           </p>
         </div>
         <div className="absolute right-0 top-0 bottom-0 w-full hidden lg:block">
-          <img
+          <Image
             src="/images/Frame.png"
             alt="Decorative pattern"
+            width={700}
+            height={400}
             className="w-full h-full object-cover mix-blend-multiply"
           />
         </div>
@@ -99,9 +101,11 @@ const MobileSystem = () => {
 
         <div className="flex flex-col lg:flex-row items-center gap-10">
           <div className="lg:w-1/3 flex justify-center">
-            <img
+            <Image
               src="/images/mf1.webp"
               alt="Elderly couple embracing"
+              width={400}
+              height={400}
               className="w-full max-w-sm rounded-lg border-4 border-red-500 shadow-lg"
             />
           </div>
@@ -111,7 +115,7 @@ const MobileSystem = () => {
               {
                 icon: <MapPin className="text-gray-500 text-7xl" />,
                 title: "GPS Tracking",
-                desc:"Real time accurate assistance in emergency. Allows Family members' caregivers, to mooniter the wearer's location. ",
+                desc: "Real time accurate assistance in emergency. Allows Family members' caregivers, to mooniter the wearer's location. ",
               },
               {
                 icon: <RadioTower className="text-gray-500 text-6xl" />,
@@ -156,9 +160,9 @@ const MobileSystem = () => {
         </div>
       </section>
       <section className="text-center py-12 bg-gray-100">
-        <h4 className="text-gray-500 text-sm">What You'll Get</h4>
+        <h4 className="text-gray-500 text-sm">What You will Get</h4>
         <h2 className="text-3xl font-bold text-red-500 my-2">
-          What's Included
+          What is Included
         </h2>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-6">
@@ -205,7 +209,7 @@ const MobileSystem = () => {
             <h3 className=" text-2xl font-medium">Get the Right Help</h3>
             <p className="text-gray-600 mt-4">
               The specialists evaluate your situation and contact the most
-              appropriate emergency person, whether it’s a family member,
+              appropriate emergency person, whether its a family member,
               friend, neighbor, or first responder.
             </p>
           </div>
@@ -241,7 +245,7 @@ const MobileSystem = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between h-full">
-                <p className="text-gray-700 italic">"{testimonial.review}"</p>
+                <p className="text-gray-700 italic">{testimonial.review}</p>
                 <h3 className="text-lg font-semibold mt-4 text-gray-900 text-right">
                   - {testimonial.name}
                 </h3>

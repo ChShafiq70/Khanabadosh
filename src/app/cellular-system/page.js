@@ -68,9 +68,9 @@ const HomeSystem = () => {
               Cellular
             </button>
             <Link href="/landline-system">
-            <button className="bg-[#E74C3C] text-white px-8 py-3  ">
-              Landline
-            </button>
+              <button className="bg-[#E74C3C] text-white px-8 py-3  ">
+                Landline
+              </button>
             </Link>
           </div>
         </div>
@@ -97,9 +97,11 @@ const HomeSystem = () => {
           </p>
         </div>
         <div className="absolute right-0 top-0 bottom-0 w-full hidden lg:block">
-          <img
+          <Image
             src="/images/Frame.png"
             alt="Decorative pattern"
+            width={700}
+            height={400}
             className="w-full h-full object-cover mix-blend-multiply"
           />
         </div>
@@ -112,9 +114,11 @@ const HomeSystem = () => {
 
         <div className="flex flex-col lg:flex-row items-center gap-10">
           <div className="lg:w-1/3 flex justify-center">
-            <img
+            <Image
               src="/images/cel2.webp"
               alt="Elderly couple embracing"
+              width={400}
+              height={400}
               className="w-full max-w-sm rounded-lg border-4 border-red-500 shadow-lg"
             />
           </div>
@@ -129,7 +133,7 @@ const HomeSystem = () => {
               {
                 icon: <MapPin className="text-gray-500 text-6xl" />,
                 title: "800-Foot Range",
-                desc: "Medical Alert’s help buttons have an 800-foot range, covering your entire home—that’s equivalent to more than two and a half football fields.",
+                desc: "Medical Alert is help buttons have an 800-foot range, covering your entire home—that is equivalent to more than two and a half football fields.",
               },
               {
                 icon: <Search className="text-gray-500 text-6xl" />,
@@ -139,7 +143,7 @@ const HomeSystem = () => {
               {
                 icon: <MessageCircle className="text-gray-500 text-6xl" />,
                 title: "Two-Way Communication",
-                desc: "The system includes a built-in two-way speaker for direct communication. Help will be send even if you’re unable to respond.",
+                desc: "The system includes a built-in two-way speaker for direct communication. Help will be send even if you are unable to respond.",
               },
               {
                 icon: <Umbrella className="text-gray-500 text-6xl" />,
@@ -149,7 +153,7 @@ const HomeSystem = () => {
               {
                 icon: <SmartphoneCharging className="text-gray-500 text-6xl" />,
                 title: "Waterproof",
-                desc: "Designed to be worn while swimming or in the shower, ensuring it’s functional in various conditions.",
+                desc: "Designed to be worn while swimming or in the shower, ensuring it is functional in various conditions.",
               },
             ].map((feature, index) => (
               <div
@@ -169,9 +173,9 @@ const HomeSystem = () => {
         </div>
       </section>
       <section className="text-center py-12 bg-gray-100">
-        <h4 className="text-gray-500 text-sm">What You'll Get</h4>
+        <h4 className="text-gray-500 text-sm">What You will Get</h4>
         <h2 className="text-3xl font-bold text-red-500 my-2">
-          What's Included
+          What is Included
         </h2>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-6">
@@ -218,7 +222,7 @@ const HomeSystem = () => {
             <h3 className=" text-2xl font-medium">Get the Right Help</h3>
             <p className="text-gray-600 mt-4">
               The specialists evaluate your situation and contact the most
-              appropriate emergency person, whether it’s a family member,
+              appropriate emergency person, whether it is a family member,
               friend, neighbor, or first responder.
             </p>
           </div>
@@ -254,7 +258,9 @@ const HomeSystem = () => {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between h-full">
-                <p className="text-gray-700 italic">"{testimonial.review}"</p>
+                <p className="text-gray-700 italic">
+                  &quot;{testimonial.review}&quot;
+                </p>
                 <h3 className="text-lg font-semibold mt-4 text-gray-900 text-right">
                   - {testimonial.name}
                 </h3>
