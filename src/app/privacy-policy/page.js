@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
       <section>
         <h2 className="text-2xl font-semibold mb-3">Respecting Your Privacy</h2>
         <p>
-          Shield my life provides information related to medical identification products ("Product"), Shieldmylife website(s) (collectively, "Website"), and services provided by Shieldmylife, including subscription services (collectively, "Services").
+          Shield my life provides information related to medical identification products ({`"Product"`}), Shieldmylife website(s) (collectively, "Website"), and services provided by Shieldmylife, including subscription services (collectively, "Services").
           We recognize that you, as a user of the Product and/or Platform, may be concerned about the information you provide to us and how we treat that information. This Privacy Policy addresses those concerns.
         </p>
       </section>
