@@ -1,110 +1,178 @@
 "use client";
-import React from "react";
 import Image from "next/image";
-import { FaCheckCircle } from "react-icons/fa";
-
-const MobileSystem = () => {
+import { useState } from "react";
+import { Home, Leaf,NotebookText,Headset,IdCard, } from "lucide-react"; 
+import { FaBell, FaUmbrella, FaClock, FaSearch } from "react-icons/fa";
+export default function Hero() {
   return (
-    <section className=" items-center justify-between  py-10 ">
-      <div className="px-6 md:px-10 flex flex-col lg:flex-row gap-4 max-w-full mx-auto">
-        <div className="lg:w-1/2 text-left py-10">
-          <h1 className="text-5xl font-bold text-red-500 mb-4">
-            Fall Detection
-          </h1>
-          <p className="text-gray-500 mb-6">
-            Every 11 seconds, an older adult is treated in the emergency room
-            for a fall. Falls are the leading cause of fatal injuries among
-            seniors and the most common reason for non-fatal trauma. Unexpected
-            emergencies can occur, which is why all Medical Alert systems offer
-            optional fall detection. This feature automatically detects falls
-            and quickly contacts help, even if you’re unable to press the
-            button.
-          </p>
-        </div>
+    <section>
+    <div
+      className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/images/falldetection.webp')", backgroundSize: "100% 100%" }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="relative text-white text-center max-w-4xl py-2">
+        <h1 className="text-5xl font-bold" style={{ fontFamily: "Poppins, sans-serif" }}>
+        Fall Detection
 
-        <div className="lg:w-3/4 mt-6 lg:mt-0 flex justify-center">
-          <Image
-            src="/images/f1.webp"
-            alt="Hero Image"
-            width={700}
-            height={400}
-            className="object-cover border-3 border-red-500 rounded-2xl"
-          />
-        </div>
+
+        </h1>
+        <p className="mt-4 text-lg leading-relaxed ">
+        Every 11 seconds, an older adult is treated in the emergency room for a fall. Falls are the leading cause of fatal injuries and the most common cause of non-fatal trauma among seniors. Emergencies can happen unexpectedly, which is why all MedAlert systems offer optional fall detection. This feature automatically detects falls and alerts help immediately, even if you’re unable to press the button.
+        </p>
+      
       </div>
-      <section className=" py-20 w-full mt-20 flex relative">
-        <div className="max-w-2xl text-start ml-1 md:ml-30">
-          <h2 className="text-4xl  text-[#E74C3C] mb-3">
-            No Long-Term Commitment
-          </h2>
-          <p className="text-gray-600 text-lg">
-            Gain peace of mind with protection in all emergency and
-            non-emergency situations, backed by a service with no hidden fees or
-            long-term contracts.
-          </p>
+    </div>
+    <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row items-center gap-8">
+      
+      {/* Left Side - Text & Features (Wider Section) */}
+      <div className="w-full lg:w-2/3">
+        {/* Title */}
+        <div className="inline-block border-1 border-[#b22222] px-16 py-2 rounded-full text-black  uppercase text-sm tracking-wider">
+          Why Choose Us
         </div>
-        <div className="absolute right-0 top-0 bottom-0 w-full hidden lg:block">
-          <Image
-            src="/images/Frame.png"
-            alt="Decorative pattern"
-            className="w-full h-full object-cover mix-blend-multiply"
-          />
-        </div>
-      </section>
-      <section className="max-w-7xl mx-auto py-16 px-10 flex flex-col lg:flex-row items-center gap-10">
-      <div className="max-w-md">
-      <h4 className="text-gray-500 text-sm font-semibold">How It Works</h4>
-      <h2 className="text-3xl font-bold text-red-500 mt-2">How Does Fall Detection Work</h2>      
-      <p className="text-gray-700 mt-4">
-        If you are unable to press your button and the sensor technology detects a fall, trained response 
-        specialists will immediately contact you through the system’s two-way speaker. Even if you cannot speak, 
-        they will assess the situation and send the appropriate help.
-      </p>
-      <div className="mt-6 space-y-4">
-        {[
-          "The fall detection technology can automatically sense a fall.",
-          "Response specialists contact you through a two-way speaker to assess your needs.",
-          "If necessary, emergency help will be dispatched to your location."
-        ].map((item, index) => (
-          <div key={index} className="flex items-start gap-3">
-            <FaCheckCircle className="text-red-500 text-xl mt-1" />
-            <p className="text-gray-800">{item}</p>
+        <h2 className="text-[#b22222] text-3xl md:text-4xl  mt-4">
+          Help Available At The Touch Of A Button
+        </h2>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          {/* Feature 1 */}
+          <div className="flex items-center">
+            <div className="bg-[#b22222] text-white p-4 rounded-full">
+              <FaBell className="text-2xl" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-2xl ">Personalized Plan</h3>
+              <p className="text-gray-600 text-lg">
+                Get instant help with a tap; the right person is notified immediately.
+              </p>
+            </div>
           </div>
-        ))}
-      </div>
-      </div>
-        <div className="relative bg-white p-10">
-          <div className="grid grid-cols-2   gap-1">
-            <div className="col-span-2 relative">
-              <div className="absolute top-0 py-10 left-0 border-r-20 border-white bg-red-600   text-white font-bold text-2xl flex flex-col items-center justify-center">
-                <p className="mb-4">Your</p>
-                <p className="mb-4">Safety</p>
-                <p className="mb-4">is</p>
-                <p>Priority</p>
-              </div>
-              <Image
-                src="/images/h1.jpg"
-                alt="Elderly couple"
-                width={400}
-                height={100}
-                className=" w-full"
-              />
 
-              <div className="absolute bottom-0 left-0 border-r-20 border-t-10 border-white ">
-                <Image
-                  src="/images/f1.webp"
-                  alt="Elderly couple in park"
-                  width={150}
-                  height={120}
-                  className="w-full"
-                />
-              </div>
+          {/* Feature 2 */}
+          <div className="flex items-center">
+            <div className="bg-[#b22222] text-white p-4 rounded-full">
+              <FaUmbrella className="text-2xl" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-2xl">Durable Help</h3>
+              <p className="text-gray-600 text-lg">
+                Our waterproof devices are easy to wear or place for quick help.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="flex items-center">
+            <div className="bg-[#b22222] text-white p-4 rounded-full">
+              <FaClock className="text-2xl" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-2xl">24/7 Support</h3>
+              <p className="text-gray-600 text-lg">
+                Our specialists are available 24/7, year-round, ready to assist you.
+              </p>
+            </div>
+          </div>
+
+          {/* Feature 4 */}
+          <div className="flex items-center">
+            <div className="bg-[#b22222] text-white p-4 rounded-full">
+              <FaSearch className="text-2xl" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-2xl">Fall Alert</h3>
+              <p className="text-gray-600 text-lg">
+                Fall detection automatically alerts help if you can't press the button.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Right Side - Fixed Image Size */}
+      <div className="w-full lg:w-1/3 flex justify-end">
+        <div className="w-[400px] h-[400px] relative">
+          <Image
+            src="/images/choseus.webp" // Replace with actual image path
+            alt="Elderly person using a medical alert system"
+            layout="fill" 
+            objectFit="cover" 
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+
+    </div>
+
+    <section className="py-12 font-poppins">
+      <h2 className="text-center text-4xl lad mb-4 tracking-wider">What's Included</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* App Connectivity */}
+        <div className="flex items-start p-4 bg-[#FCF9F5] rounded-xl shadow-lg h-full min-h-[200px]">
+          <Home className="text-[#B22222] w-14 h-14 flex-shrink-0 relative top-1" />
+          <div className="ml-5">
+            <h3 className="text-2xl  text-[#B22222]">App Connectivity</h3>
+            <p className="mt-2 text-gray-700 text-lg">
+              The MedAlert System allows you to easily test your device, contact support, manage your contact list, and more, all through the app.
+            </p>
+          </div>
+        </div>
+
+        {/* Emergency Contact List */}
+        <div className="flex items-start p-4 bg-[#FCF9F5]  rounded-xl shadow-lg h-full min-h-[200px]">
+          <Leaf className="text-[#B22222] w-14 h-14 flex-shrink-0 relative top-1" />
+          <div className="ml-5">
+            <h3 className="text-2xl text-[#B22222] ">Emergency Contact List</h3>
+            <p className="mt-2 text-gray-700 text-lg">
+              Store and manage a list of contacts that the system will notify in case of an emergency, including family, friends, or neighbors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+<section className="px-2">
+<div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-3">
+      
+      {/* Card 1 - Activate Help Button */}
+        {/* Card 2 - Speak With Specialist (Now White) */}
+        <div className="text-white bg-[#b22222] p-16 rounded-lg shadow-md text- border transition duration-300 hover:bg-[#b22222] hover:text-white">
+        <div className="flex justify-left">
+          <NotebookText  className="text-4xl mb-4 w-12 h-12" />
+        </div>
+        <h3 className="text-xl font-semibold mb-2">Activate Your Help Button</h3>
+        <p className="text-white text-lg">
+        Simply press the help button on your pendant or bracelet, which should be worn at all times for easy access.
+        </p>
+      </div>
+
+      {/* Card 2 - Speak With Specialist (Now White) */}
+      <div className="bg-white text-[#b22222] p-16 rounded-lg shadow-md text- border transition duration-300 hover:bg-[#b22222] hover:text-white">
+        <div className="flex justify-left">
+          <Headset className="text-4xl mb-4 w-12 h-12" />
+        </div>
+        <h3 className="text-xl font-semibold mb-2">Speak With A Response Specialist</h3>
+        <p className="text-gray-700 text-lg">
+          GetMedicalAlert is highly trained specialists are available 24/7, 365 days a year, ready to assist you.
+        </p>
+      </div>
+
+      {/* Card 3 - Receive Assistance (Same White Style) */}
+       {/* Card 2 - Speak With Specialist (Now White) */}
+       <div className="bg-white text-[#b22222] p-16 rounded-lg shadow-md text- border transition duration-300 hover:bg-[#b22222] hover:text-white">
+        <div className="flex justify-left">
+          <IdCard className="text-4xl mb-4 w-12 h-12" />
+        </div>
+        <h3 className="text-xl font-semibold mb-2">Receive the Right Assistanc</h3>
+        <p className="text-gray-700 text-lg">
+        Our specialists assess your situation and immediately reach out to the most suitable emergency contact.
+        </p>
+      </div>
+
+    </div>
+</section>
+
     </section>
   );
-};
-
-export default MobileSystem;
+}

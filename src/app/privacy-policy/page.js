@@ -5,10 +5,10 @@ import React from "react";
 const PrivacyPolicy = () => {
   return (
     <div className=" bg-[#F6F6F6] mx-auto px-20 py-1 text-gray-800">
-      <h1 className="text-3xl font-semibold mb-6">Privacy Policy</h1>
+      <h1 className="text-3xl text-[#b22222] font-semibold mb-6">Privacy Policy</h1>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-3">Respecting Your Privacy</h2>
+        <h2 className="text-2xl text-[#b22222] font-semibold mb-3">Respecting Your Privacy</h2>
         <p>
           Shield my life provides information related to medical identification
           products ({`"Product"`}), Shieldmylife website(s) (collectively, (
@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
       </section>
 
       <section className="mt-6">
-        <h2 className="text-2xl font-semibold mb-3">Donors</h2>
+        <h2 className="text-2xl text-[#b22222] font-semibold mb-3">Donors</h2>
         <p>
           All information concerning donors or prospective donors, including
           their names, addresses, and telephone numbers, are kept strictly
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
       </section>
 
       <section className="mt-6">
-        <h2 className="text-2xl font-semibold mb-3">
+        <h2 className="text-2xl text-[#b22222] font-semibold mb-3">
           Overview of Shieldmylife Services
         </h2>
         <p>
@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
       </section>
 
       <section className="mt-6">
-        <h2 className="text-2xl font-semibold mb-3">
+        <h2 className="text-2xl font-semibold text-[#b22222] mb-3">
           Information Collected by the Shieldmylife Platform
         </h2>
         <p>
@@ -57,7 +57,7 @@ const PrivacyPolicy = () => {
       </section>
 
       <section className="mt-6">
-        <h2 className="text-2xl font-semibold mb-3">Opt-out Policy</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-[#b22222]">Opt-out Policy</h2>
         <p>
           If you supply us with your postal address, email address or phone
           number, you may receive periodic communications from us with
@@ -75,8 +75,8 @@ const PrivacyPolicy = () => {
           your Shieldmylife membership.
         </p>
       </section>
-      <section className="mt-6">
-        <h2 className="text-2xl font-semibold mb-3">
+      <section className="mt-6 ">
+        <h2 className="text-2xl font-semibold text-[#b22222] mb-3">
           Exceptions to Opt-out Policy
         </h2>
         <p>
@@ -91,7 +91,7 @@ const PrivacyPolicy = () => {
         </p>
       </section>
       <section className="mt-6">
-        <h2 className="text-2xl font-semibold mb-3">How We Use Information</h2>
+        <h2 className="text-2xl font-semibold text-[#b22222] mb-3 ">How We Use Information</h2>
         <p>
           We use information we collect for a variety of business purposes,
           including to improve Shieldmylife is products and services, maintain

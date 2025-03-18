@@ -1,69 +1,91 @@
-"use client";
 import Image from "next/image";
-import { Bell,  Umbrella, Database, CircleAlert , TimerReset, Smartphone} from "lucide-react";
+import { FaBell, FaUmbrella, FaClock, FaSearch } from "react-icons/fa";
 
-export default function Feature() {
+const WhyChooseUs = () => {
   return (
-    <section className="py-6 px-6 md:px-30 bg-[#f6f6f6] text-center">
-      <h3 className="text-black text-sm p-3">Why Choose Shieldmylife</h3>
-      <h2 className="text-3xl md:text-4xl  text-[#E74C3C] mt-2">Help At The Press Of A Button</h2>
-      <div className="mt-10 flex flex-col lg:flex-row items-start lg:items-start">
-        <div className="lg:w-[40%] flex justify-center">
-          <div className="border-2 border-red-500  overflow-hidden rounded-3xl">
-            <Image src="/images/home3.webp" alt="Elderly Couple" width={300} height={200} className="object-cover " />
-          </div>
+    <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col lg:flex-row items-center gap-8">
+      
+      {/* Left Side - Text & Features (Wider Section) */}
+      <div className="w-full lg:w-2/3">
+        {/* Title */}
+        <div className="inline-block border-1 border-[#b22222] px-16 py-2 rounded-full text-black  uppercase text-sm tracking-wider">
+          Why Choose Us
         </div>
-        <div className="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-10 text-left py-8 md:py-0">
-          <div className="flex items-start gap-2">
-            <Bell className="w-40 h-10 text-gray-600" />
-            <div className="flex flex-col gap-2" >
-              <h3 className="text-xl uppercase">Personalized responce plan</h3>
-              <p className="text-gray-600 text-sm">Immediate response at the press of a button. The right person will be immediately contacted to provide you with the help you require.</p>
+        <h2 className="text-[#b22222] text-3xl md:text-4xl  mt-4">
+          Help Available At The Touch Of A Button
+        </h2>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          {/* Feature 1 */}
+          <div className="flex items-center">
+            <div className="bg-[#b22222] text-white p-4 rounded-full">
+              <FaBell className="text-2xl" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-2xl ">Personalized Plan</h3>
+              <p className="text-gray-600 text-lg">
+                Get instant help with a tap; the right person is notified immediately.
+              </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-2">
-            <Umbrella className="w-40 h-10 text-gray-600" />
-            <div className="flex flex-col gap-2" >
-              <h3 className="text-xl uppercase">waterproof help buttons</h3>
-              <p className="text-gray-600 text-sm">These devices are waterproof and come in handy. You can wear them or install them at any place in your home including.</p>
+          {/* Feature 2 */}
+          <div className="flex items-center">
+            <div className="bg-[#b22222] text-white p-4 rounded-full">
+              <FaUmbrella className="text-2xl" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-2xl">Durable Help</h3>
+              <p className="text-gray-600 text-lg">
+                Our waterproof devices are easy to wear or place for quick help.
+              </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-2">
-            <TimerReset className="w-30 h-15 text-gray-600" />
-            <div className="flex flex-col gap-2" >
-              <h3 className="text-xl uppercase">24/7/365 RESPONSE</h3>
-              <p className="text-gray-600 text-sm">Trained specialists are all time available to provide you with the assistance you need.</p>
+          {/* Feature 3 */}
+          <div className="flex items-center">
+            <div className="bg-[#b22222] text-white p-4 rounded-full">
+              <FaClock className="text-2xl" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-2xl">24/7 Support</h3>
+              <p className="text-gray-600 text-lg">
+                Our specialists are available 24/7, year-round, ready to assist you.
+              </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-2">
-            <CircleAlert className="w-40 h-10 text-gray-600" />
-            <div className="flex flex-col gap-2" >
-              <h3 className="text-xl uppercase">FALL DETECTION</h3>
-              <p className="text-gray-600 text-sm">Add fall detection to automatically detect when you fall and quickly contact help, even if you are unable to press the button.</p>
+          {/* Feature 4 */}
+          <div className="flex items-center">
+            <div className="bg-[#b22222] text-white p-4 rounded-full">
+              <FaSearch className="text-2xl" />
+            </div>
+            <div className="ml-4">
+              <h3 className="text-2xl">Fall Alert</h3>
+              <p className="text-gray-600 text-lg">
+                Fall detection automatically alerts help if you can't press the button.
+              </p>
             </div>
           </div>
-
-          <div className="flex items-start gap-2">
-            <Smartphone className="w-40 h-10 text-gray-600" />
-            <div className="flex flex-col gap-2" >
-              <h3 className="text-xl uppercase">MOBILE APP</h3>
-              <p className="text-gray-600 text-sm">The Medical Alert Connect app makes it simple to manage your account from your phone, ensuring your loved ones receive real-time notifications of emergencies, updates, and alerts.</p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-2">
-            <Database className="w-40 h-10 text-gray-600" />
-            <div className="flex flex-col gap-2" >
-              <h3 className="text-xl uppercase">NO LONG-TERM CONTRACTS</h3>
-              <p className="text-gray-600 text-sm">Experience peace of mind knowing you are protected in both emergency and non-emergency situations with a service that has no hidden fees or long-term contracts.</p>
-            </div>
-          </div>
-
         </div>
       </div>
-    </section>
+
+      {/* Right Side - Fixed Image Size */}
+      <div className="w-full lg:w-1/3 flex justify-end">
+        <div className="w-[400px] h-[400px] relative">
+          <Image
+            src="/images/choseus.webp" // Replace with actual image path
+            alt="Elderly person using a medical alert system"
+            layout="fill" 
+            objectFit="cover" 
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+
+    </div>
   );
-}
+};
+
+export default WhyChooseUs;

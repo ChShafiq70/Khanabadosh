@@ -1,49 +1,52 @@
-"use client";
 import Image from "next/image";
-import { Phone, UserCheck, Droplet, Settings } from "lucide-react";
-import { motion } from "framer-motion";
 
-export default function About() {
+const AboutUsSection = () => {
   return (
-    <section className="py-6 px-6 md:px-40 bg-[#fff] flex flex-col lg:flex-row items-center gap-10">
-      <div className="relative w-full lg:w-[40%]">
-        <Image src="/images/home3.webp" alt="Elderly Man Reading" width={500} height={500} className="object-cover " />
-        <motion.div className=" flex gap-3 py-4 absolute bottom-0 left-0 bg-red-500 text-white px-3 shadow-lg"
-        initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}>
-          <h3 className="text-4xl text-center justify-center">2 +</h3>
-          <p className="text-lg w-40">Years of Experience</p>
-        </motion.div>
-      </div>
-      <motion.div className="lg:w-[60%] text-left"
-      initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}>
-        <h4 className="text-sm letter-spacing-2 tracking-normal leading-loose text-black uppercase">About Us</h4>
-        <h2 className="text-5xl font-medium tracking-normal leading-snug text-red-500 mt-2">Safe And Independent Living</h2>
-        <p className="mt-4 text-gray-600 text-sm">
-          Welcome to Shield My Life, your comprehensive source of information on high-quality emergency devices. Our mission is to ensure you and your loved ones are prepared for any unexpected situation with reliable and innovative safety solutions. The alert system enables independent living by giving you quick, easy access to trained response specialists 24/7/365. The help button is reliable, easy to use, and waterproof, allowing it to be worn in the shower or tub where slips and falls are most common.
-        </p>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex items-center gap-3">
-            <UserCheck className="w-8 h-8 text-red-500" />
-            <span className="text-md text-gray-500 tracking-normal leading-snug">Online Consultation</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Phone className="w-8 h-8 text-red-500" />
-            <span className="text-md text-gray-500 tracking-normal leading-snug">24/7 Response</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Droplet className="w-8 h-8 text-red-500" />
-            <span className="text-md text-gray-500 tracking-normal leading-snug">Water Proof Devices</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Settings className="w-8 h-8 text-red-500" />
-            <span className="text-md text-gray-500 tracking-normal leading-snug">Easy to Manage</span>
+    <div className="bg-[#fdf9f7] py-12 px-4 md:px-8 lg:px-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] items-center gap-8">
+
+        {/* Left Side Content */}
+        <div>
+          <h4 className="text-[#b22222] text-sm tracking-[0.55em] leading-loose uppercase">
+            About Us
+          </h4>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#b22222] mt-2 leading-tight">
+            Safe And Independent Living
+          </h2>
+          <p className="text-gray-600 mt-4 text-base md:text-lg leading-relaxed">
+            We provide reliable emergency devices to ensure you and your loved ones are always prepared.
+            With 24/7 access to trained specialists, our waterproof help button is easy to use and perfect for high-risk areas
+            like showers and tubs, helping you maintain independence and safety.
+          </p>
+
+          {/* Button Section - Keeps Circular Design & Spacing */}
+          <div className="flex flex-wrap justify-start gap-6  mt-10">
+            {["Online Consultation", "24/7 Response", "Water Proof Devices"].map((text, index) => (
+              <div 
+                key={index} 
+                className="bg-[#fbf3f1] text-[#b22222] w-[160px] h-[130px] flex items-center justify-center 
+                rounded-full text-center shadow-md text-lg  font-medium transition-all duration-300 hover:shadow-lg"
+              >
+                {text}
+              </div>
+            ))}
           </div>
         </div>
-      </motion.div>
-    </section>
+
+        {/* Right Side Image */}
+        <div className="w-full max-w-[500px] mx-auto md:mx-0">
+          <Image
+            src="/images/aboutus.webp"
+            alt="Senior Man with Medical Alert Device"
+            width={500}
+            height={750}
+            className="rounded-lg shadow-lg w-full h-auto"
+          />
+        </div>
+
+      </div>
+    </div>
   );
-}
+};
+
+export default AboutUsSection;
