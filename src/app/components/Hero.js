@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation"; // Correct hook for navigation in Next.js App Router
+import { useRouter } from "next/navigation"; 
 import { useState } from "react";
 
 export default function Hero() {
@@ -13,8 +13,8 @@ export default function Hero() {
     if (!zipCode.trim()) {
       setError("Please fill in the Zip Code field.");
     } else {
-      setError(""); // Clear error message
-      router.push(`/submit-page?zip=${zipCode}`); // Redirect with query parameter
+      setError(""); 
+      router.push(`/submit-page?zip=${zipCode}`); 
     }
   };
 
@@ -32,7 +32,6 @@ export default function Hero() {
           Enjoy peace of mind with 24/7 access to medical alert systems at the touch of a button.
         </p>
 
-        {/* Form Section */}
         <form onSubmit={handleSubmit} className="mt-6">
           <input 
             type="number" 

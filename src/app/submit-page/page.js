@@ -7,11 +7,9 @@ export default function Hero() {
       className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat px-4 md:px-10"
       style={{ backgroundImage: "url('/images/homehero.webp')" }}
     >
-      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="relative w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-        {/* Left Side - Text Content */}
         <div className="text-white text-center md:text-left max-w-lg">
           <h2 className="text-4xl md:text-5xl leading-tight font-poppins">
             Get Medical Alert For A Safe And Secure Life
@@ -21,7 +19,6 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Right Side - Form (Increased Width & Padding) */}
         <div className="bg-[#737273]/80 px-8 py-10 shadow-lg w-full max-w-lg text-white rounded-lg">
           <form className="space-y-4">
             <input 
@@ -45,7 +42,6 @@ export default function Hero() {
               className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
             />
 
-            {/* Checkbox and Terms */}
             <div className="flex items-start text-xs text-gray-300">
               <input 
                 type="checkbox"
@@ -63,7 +59,6 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* Submit Button */}
             <Link href="/thankyou-page">
               <button 
                 type="submit"

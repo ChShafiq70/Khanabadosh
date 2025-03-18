@@ -1,4 +1,4 @@
-"use client"; // ✅ Marks this as a Client Component
+"use client"; 
 
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
@@ -13,12 +13,12 @@ export default function AuthWrapper({ children }) {
     setIsAuthenticated(auth);
 
     if (!auth && pathname !== "/login") {
-      router.push("/login"); // ✅ Redirect to login if not authenticated
+      router.push("/login"); 
     }
   }, [pathname, router]);
 
   if (!isAuthenticated && pathname !== "/login") {
-    return null; // ✅ Prevent unauthorized page rendering before redirecting
+    return null; 
   }
 
   return <>{children}</>;

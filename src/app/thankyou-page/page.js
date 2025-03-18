@@ -6,7 +6,6 @@ export default function ThankYou() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-[#F0F0FA] text-center p-6">
-      {/* Checkmark Icon */}
       <div className="w-30 h-30 flex items-center justify-center bg-red-700 rounded-full">
         <svg
           className="w-20 h-20 text-white"
@@ -22,7 +21,6 @@ export default function ThankYou() {
         </svg>
       </div>
 
-      {/* Thank You Message */}
       <h1 className="text-5xl  font-Poppins font-semibold text-[#b22222] mt-4">Thank You</h1>
       <p className="text-lg   font-Poppins font-semibold text-[#b22222] mt-2">
         We have received your submission and will get back to you.
@@ -32,7 +30,6 @@ export default function ThankYou() {
         If you have any urgent questions or need further information, please don’t hesitate to call us. Our customer service team is available to assist you.
       </p>
 
-      {/* Contact Info */}
       <a href="tel:+18884535777" className="mt-4 font-Poppins  text-[#b22222] text-2xl font-bold underline">
         +1-888-453-5777
       </a>

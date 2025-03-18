@@ -5,7 +5,6 @@ const AboutUsSection = () => {
     <div className="bg-[#fdf9f7] py-12 px-4 md:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] items-center gap-8">
 
-        {/* Left Side Content */}
         <div>
           <h4 className="text-[#b22222] text-sm tracking-[0.55em] leading-loose uppercase">
             About Us
@@ -19,7 +18,6 @@ const AboutUsSection = () => {
             like showers and tubs, helping you maintain independence and safety.
           </p>
 
-          {/* Button Section - Keeps Circular Design & Spacing */}
           <div className="flex flex-wrap justify-start gap-6  mt-10">
             {["Online Consultation", "24/7 Response", "Water Proof Devices"].map((text, index) => (
               <div 
@@ -33,7 +31,6 @@ const AboutUsSection = () => {
           </div>
         </div>
 
-        {/* Right Side Image */}
         <div className="w-full max-w-[500px] mx-auto md:mx-0">
           <Image
             src="/images/aboutus.webp"

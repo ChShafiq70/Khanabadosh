@@ -8,7 +8,6 @@ import { Flag ,Clock,Mail,Phone,} from "lucide-react";
 export default function Footer() {
   return (
     <footer className="relative bg-red-700 text-white pt-30 pb-10 px-6">
-      {/* Background Image with Opacity */}
       <div className="absolute inset-0 opacity-20">
         <Image
           src="/images/Background1.png"
@@ -18,9 +17,7 @@ export default function Footer() {
         />
       </div>
 
-      {/* Content Wrapper */}
       <div className="relative z-10 container mx-auto grid md:grid-cols-4 gap-6">
-        {/* Logo & Description */}
         <div>
           <Image src="/images/footerlogo.png" alt="Logo" width={350} height={100} />
           <p className="mt-4 text-lg">
@@ -28,7 +25,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Contact Section */}
         <div>
           <h3 className="text-2xl font-bold">Get In Touch</h3>
           <ul className="mt-6 space-y-2 text-"> <div className="flex items-center space-x-2">
@@ -52,7 +48,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className="text-2xl font-bold">Quicklinks</h3>
           <ul className="mt-4 space-y-2 text-lg ">
@@ -72,12 +67,10 @@ export default function Footer() {
       </div>
       </div>
 
-      {/* Social Icons */}
       
 <div className="relative   text-center   pt-10 text-lg">
 <Link href="/privacy-policy">Privacy Policy</Link> | <Link href="/terms">Terms & Conditions</Link>
 </div>
-      {/* Footer Bottom */}
       <div className="relative z-10 mt-3 text-center border-t border-white pt-2 text-lg">
         <p className="mt-1">Copyright © 2025 GetMedicalAlert</p>
       </div>

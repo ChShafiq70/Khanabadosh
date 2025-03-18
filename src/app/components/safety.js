@@ -1,11 +1,9 @@
-// import { RiTeamLine, } from "react-icons/fa";
 import { Home, Leaf,Users, } from "lucide-react"; 
 
 const feacture = () => {
   return (
     <div className="max-w-6xl mx-auto px-2 py-14">
       <div className="grid md:grid-cols-3 gap-4">
-        {/* Card 1 */}
         <div className="border-2 border-[#b22222] rounded-lg p-12 text-center">
   <div className="flex justify-center">
     <Home className="text-[#b22222] w-12 h-12 mb-4" />
@@ -15,9 +13,6 @@ const feacture = () => {
     Select your alert system wisely. Begin by looking for a medical alert system that meets your specific needs.
   </p>
 </div>
-
-
-        {/* Card 2 */}
 <div className="border-2 border-[#b22222] rounded-lg p-12 text-center">
   <div className="flex justify-center">
     <Leaf className="text-[#b22222] w-12 h-12 mb-4" />
@@ -27,9 +22,6 @@ const feacture = () => {
     A variety of systems to choose from, with a personalized response plan to reach the right person when needed.
   </p>
 </div>
-
-
-        {/* Card 3 */}
         <div className="border-2 border-[#b22222] rounded-lg p-10 text-center">
   <div className="flex justify-center">
     <Users className="text-[#b22222] w-12 h-12 mb-4" />
