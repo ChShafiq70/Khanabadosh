@@ -70,6 +70,7 @@ export default function Hero() {
             A Medical Alert System For Every Lifestyle
           </h1>
           <div className="mt-6 flex flex-col gap-3">
+          <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
             <input type="text" placeholder="First Name" className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-red-500" />
             <input type="text" placeholder="Last Name" className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-red-500" />
             <input 
