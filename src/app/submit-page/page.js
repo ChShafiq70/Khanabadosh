@@ -1,7 +1,48 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Hero() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    zipCode: "",
+    phone: "",
+    termsChecked: false,
+  });
+
+  const [errors, setErrors] = useState({});
+
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  // Validate form fields
+  const validateForm = () => {
+    let newErrors = {};
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required.";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required.";
+    if (!formData.zipCode.trim()) newErrors.zipCode = "Zip code is required.";
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required.";
+    if (!formData.termsChecked) newErrors.termsChecked = "You must accept the terms.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Returns true if no errors
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      window.location.href = "/thankyou-page"; // Redirect on success
+    }
+  };
+
   return (
     <section
       className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat px-4 md:px-10"
@@ -20,31 +61,61 @@ export default function Hero() {
         </div>
 
         <div className="bg-[#737273]/80 px-8 py-10 shadow-lg w-full max-w-lg text-white rounded-lg">
-          <form className="space-y-4">
-            <input 
-              type="text"
-              placeholder="First Name"
-              className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
-            />
-            <input
-              type="number"
-              placeholder="Enter zip code"
-              className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
-            />
-            <input
-              type="number"
-              placeholder="Phone"
-              className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
-            />
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <div>
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
+                onChange={handleChange}
+                className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
+              />
+              {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
+            </div>
+
+            <div>
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                value={formData.lastName}
+                onChange={handleChange}
+                className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
+              />
+              {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
+            </div>
+
+            <div>
+              <input
+                type="number"
+                name="zipCode"
+                placeholder="Enter zip code"
+                value={formData.zipCode}
+                onChange={handleChange}
+                className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
+              />
+              {errors.zipCode && <p className="text-red-500 text-sm">{errors.zipCode}</p>}
+            </div>
+
+            <div>
+              <input
+                type="number"
+                name="phone"
+                placeholder="Phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full p-3 text-black bg-white rounded-md focus:outline-none"
+              />
+              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+            </div>
 
             <div className="flex items-start text-xs text-gray-300">
-              <input 
+              <input
                 type="checkbox"
+                name="termsChecked"
+                checked={formData.termsChecked}
+                onChange={handleChange}
                 className="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-600"
               />
               <p className="ml-2 leading-snug font-bold text-white">
@@ -58,15 +129,14 @@ export default function Hero() {
                 </a>.
               </p>
             </div>
+            {errors.termsChecked && <p className="text-red-500 text-sm">{errors.termsChecked}</p>}
 
-            <Link href="/thankyou-page">
-              <button 
-                type="submit"
-                className="w-full bg-[#b22222] text-white py-3 px-6 rounded-md text-base font-semibold hover:bg-red-800 transition duration-300"
-              >
-                SUBMIT
-              </button>
-            </Link>
+            <button
+              type="submit"
+              className="w-full bg-[#b22222] text-white py-3 px-6 rounded-md text-base font-semibold hover:bg-red-800 transition duration-300"
+            >
+              SUBMIT
+            </button>
           </form>
         </div>
       </div>

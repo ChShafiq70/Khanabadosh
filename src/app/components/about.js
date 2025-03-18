@@ -18,7 +18,7 @@ const AboutUsSection = () => {
             like showers and tubs, helping you maintain independence and safety.
           </p>
 
-          <div className="flex flex-wrap justify-start gap-6  mt-10">
+          <div className="flex flex-wrap justify-start gap-6 sd:center mt-10">
             {["Online Consultation", "24/7 Response", "Water Proof Devices"].map((text, index) => (
               <div 
                 key={index} 
