@@ -15,21 +15,21 @@ const cards = () => {
       </div>
 
       <div className="bg-white text-[#b22222] p-16 rounded-lg shadow-md text- border transition duration-300 hover:bg-[#b22222] hover:text-white">
-        <div className="flex justify-left">
+        <div className="flex justify-left ">
           <Headset className="text-4xl mb-4 w-12 h-12" />
         </div>
         <h3 className="text-xl font-semibold mb-2">Speak With A Response Specialist</h3>
-        <p className="text-gray-700 text-sm">
+        <p className="text-gray-700 text-sm hover:text-white">
           GetMedicalAlert is highly trained specialists are available 24/7, 365 days a year, ready to assist you.
         </p>
       </div>
 
        <div className="bg-white text-[#b22222] p-16 rounded-lg shadow-md text- border transition duration-300 hover:bg-[#b22222] hover:text-white">
-        <div className="flex justify-left">
+        <div className="flex justify-left ">
           <IdCard className="text-4xl mb-4 w-12 h-12" />
         </div>
         <h3 className="text-xl font-semibold mb-2">Receive the Right Assistanc</h3>
-        <p className="text-gray-700 text-sm">
+        <p className="text-gray-700 text-sm hover:text-white">
         Our specialists assess your situation and immediately reach out to the most suitable emergency contact.
         </p>
       </div>
