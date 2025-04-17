@@ -1,49 +1,82 @@
-import Image from "next/image";
+// components/AboutSection.jsx
 
-const AboutUsSection = () => {
+export default function AboutSection() {
   return (
-    <div className="bg-[#fdf9f7] py-12 px-4 md:px-8 lg:px-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] items-center gap-8">
+    <section className="relative pt-90 md:pt-40 pb-5 px-4">
+      {/* Background image with visible overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/s1bg.webp')" }}
+      />
+      <div className="absolute inset-0 bg-white opacity-70" />
 
-        <div>
-          <h4 className="text-[#b22222] text-sm tracking-[0.55em] leading-loose uppercase">
-            About Us
-          </h4>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#b22222] mt-2 leading-tight">
-            Safe And Independent Living
-          </h2>
-          <p className="text-gray-600 mt-4 text-base md:text-lg leading-relaxed">
-            We provide reliable emergency devices to ensure you and your loved ones are always prepared.
-            With 24/7 access to trained specialists, our waterproof help button is easy to use and perfect for high-risk areas
-            like showers and tubs, helping you maintain independence and safety.
-          </p>
-
-          <div className="flex flex-wrap justify-start gap-6 sd:center mt-10">
-            {["Online Consultation", "24/7 Response", "Water Proof Devices"].map((text, index) => (
-              <div 
-                key={index} 
-                className="bg-[#fbf3f1] text-[#b22222] w-[160px] h-[130px] flex items-center justify-center 
-                rounded-full text-center shadow-md text-lg  font-medium transition-all duration-300 hover:shadow-lg"
-              >
-                {text}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="w-full max-w-[500px] mx-auto md:mx-0">
-          <Image
-            src="/images/aboutus.webp"
-            alt="Senior Man with Medical Alert Device"
-            width={500}
-            height={750}
-            className="rounded-lg shadow-lg w-full h-auto"
-          />
-        </div>
-
+      {/* Text Content */}
+      <div className="relative z-10 text-center text-black max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-2">ABOUT</h2>
+        <h3 className="text-2xl md:text-3xl font-bold text-[#496B21] mb-6">
+          KHANABADOSH GLAMPS
+        </h3>
+        <p className="text-base md:text-lg mb-4">
+          Welcome to Khanabadosh Glamps, where luxury meets nature in the breathtaking
+          landscapes of Kumrat Valley and Murree Hills. We offer a unique glamping experience,
+          blending the comforts of a high-end resort with the serenity of the great outdoors.
+        </p>
+        <p className="text-base md:text-lg">
+          Our luxury dome tents are designed to provide an immersive yet comfortable stay,
+          allowing you to reconnect with nature without compromising on style and convenience.
+          Whether you seek adventure, relaxation, or a peaceful retreat, Khanabadosh Glamps
+          is your perfect getaway.
+        </p>
       </div>
-    </div>
-  );
-};
 
-export default AboutUsSection;
+      {/* Cards */}
+      <div className="relative z-10 px-4 md:px-12 mt-16 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-10 items-start max-w-6xl mx-auto">
+  {/* Murree Glamps */}
+  <div className="text-center ">
+    <img
+      src="/images/s1.webp"
+      alt="Murree Glamps"
+      className="rounded-xl w-full object-cover h-[240px]"
+    />
+    <h4 className="text-xl font-bold text-[#496B21] mt-4">Murree Glamps</h4>
+    <div className="mt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm text-black">
+      <p className="m-0">
+        Welcome to Khanabadosh Glamps, where luxury meets nature in the...
+      </p>
+      <button className=" hidden md:flex text-xs mt-5 mr-10 sm:items-center justify-center bg-[#737373] text-black px-3 py-1 rounded-full shadow-md whitespace-nowrap">
+        Review / Rating
+      </button>
+    </div>
+  </div>
+
+  {/* Center divider and text */}
+  <div className="hidden md:flex flex-col items-center justify-center text-black w-auto">
+    <div className="w-px bg-gray-400 h-20"></div>
+    <span className="text-center font-semibold mt-2 mb-2 text-sm md:text-xl whitespace-nowrap">
+      Khanabadosh Glamps
+    </span>
+    <div className="w-px bg-gray-400 h-20"></div>
+  </div>
+
+  {/* Kumrat Valley */}
+  <div className="text-center md:pt-20">
+    <img
+      src="/images/s1.1.webp"
+      alt="Kumrat Valley"
+      className="rounded-xl w-full object-cover h-[300px]"
+    />
+    <h4 className="text-xl font-bold text-[#496B21] mt-4">Kumrat Valley</h4>
+    <div className="mt-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm text-black">
+      <p className="m-0">
+        Welcome to Khanabadosh Glamps, kumrat meets nature in the...
+      </p>
+      <button className=" hidden md:flex  text-xs mt-5 mr-10 bg-[#737373] text-black px-3 py-1 rounded-full shadow-md whitespace-nowrap">
+        Review / Rating
+      </button>
+    </div>
+  </div>
+</div>
+
+    </section>
+  );
+}

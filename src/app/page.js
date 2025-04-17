@@ -1,9 +1,12 @@
-import About from "./components/about";
-import FAQs from "./components/faqs";
-import Features from "./components/features";
-import Help from "./components/help";
-import Hero from "./components/Hero";
-import Safety from "./components/safety";
+import AboutSection from "./components/about";
+import Activities from "./components/activity";
+import BlogSection from "./components/blog";
+import FacilityDetails from "./components/facilties";
+import FeaturedSites from "./components/feature";
+import HeroSection from "./components/hero";
+import TestimonialImageSection from "./components/image";
+import InstagramSlider from "./components/instagram";
+import TestimonialSlider from "./components/testimonial";
 
 
 
@@ -11,12 +14,15 @@ import Safety from "./components/safety";
 export default function Home() {
   return (
     <>
-    <Hero/>
-    <Safety/>
-    <Features/>
-    <Help/>
-    <About/>
-    
+   <HeroSection/>
+    <AboutSection/>
+    <FeaturedSites/>
+    <Activities/>
+    <FacilityDetails/>
+    <TestimonialSlider/>
+    <TestimonialImageSection/>
+    <BlogSection/>
+    <InstagramSlider/>
 
     
   

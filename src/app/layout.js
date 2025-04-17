@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>GetMedicalAlert</title>
+        <title>Khanabadosh</title>
       </head>
       <body>
         {/* <AuthWrapper> */}
