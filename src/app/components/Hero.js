@@ -3,7 +3,7 @@ export default function HeroSection() {
     return (
       <section
         className="relative h-[80vh] md:h-screen lg:py-75 md:py-75 sm:py-75 bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/images/herobg.webp')" }}
+        style={{ backgroundImage: "url(/images/herobg.webp)" }}
       >
         {/* Overlay */}
         <div className="absolute inset-0  bg-opacity-40 z-10" />
